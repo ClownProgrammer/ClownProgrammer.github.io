@@ -6,7 +6,7 @@ body {
 #page {
     z-index: 5;
     padding: 0px;
-    max-width: 500px;
+    max-width: 720px;
     margin: auto;
     border: 1px solid gray;
     border-radius: 6px;
