@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Цифровой баттл</title>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="width: 100%;"></div>
+        <div id="page">
+            <form id="n_and_non" style="font-family: 'Yusei Magic', sans-serif;">
+                <input id="number" type="text" placeholder="Введите свое число" style="width: auto;"></input>
+                <span class="dif big">
+                    <div class="checkbox">
+                        <input type="checkbox" id="no_number">
+                        <label for="no_number">не вводить число</label>
+                    </div>
+                </span>
+            </form>
+            <form>
+                <span class="dif big">  
+                    <select id="dif">
+                        <option selected value="easy">Легкий</option>   
+                        <option value="normal">Средний</option>
+                        <option value="hard">Сложный</option>  
+                    </select> 
+                </span> 
+            </form>
+            <form id="n_move">
+                <input id="number_move" type="text" placeholder="Введите число" style="width: 100px;">
+                <input id="new_move" type="button" value="Сделать ход">
+            </form>
+            <div id="HistoryNumber">
+                <div>
+                    <table id="game_tab">
+                        <tbody>
+                        <tr>
+                            <th id="UserDigit"></th>
+                            <th colspan="3">Ты</th>
+                            <th colspan="3">Компьютер</th>
+                        </tr>
+                        
+                        <tr>
+                            <th>Ход</th>
+                            <th>Число</th>
+                            <th>кол-во совпавших чисел</th>
+                            <th>из них на своем месте</th>
+                            <th>Число</th>
+                            <th>кол-во совпавших чисел</th>
+                            <th>из них на своем месте</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input id="send" type="button" value="Отправить" style="float: right; visibility: hidden;">
+                <div id="fkTest">
+                    <div id="fakeDivBlock">
+
+                    </div>
+                </div>
+                <div id="chat">
+                    <div id="msg"></div>
+                </div>
+                <div class="loading" style="color: #aaa;">Компьютер печатает:<span class="ellipsis">...</span></div>
+            </div>
+            <br>
+            
+        </div>
+        <div id="notes">
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+        <script src="inde.js"></script>
+    </body>
+</html>
